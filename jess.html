@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Adobe+Garamond+Pro|Josefin+Sans|Playfair+Display|Montserrat|Roboto+Slab&display=swap">
+
+    <title>Pretty Jess Portfolio</title>
+    <style type="text/css">
+        body {
+            background-color: #333;
+            font-weight: bold;
+            color: azure;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            font-size: 25px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: transparent;
+        }
+
+        .header img {
+            width: 30%;
+            height: auto;
+            max-height: 40vh;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .header img:hover {
+            width: 35%;
+            height: auto;
+            max-height: 50vh;
+            border-radius: 14px;
+            margin-right: 20px;
+            transition: ease-in-out 1500ms;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 60px;
+        }
+
+        .portfolio-content {
+            padding: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .navlinks {
+            text-align: center;
+        }
+
+        .navlinks ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navlinks ul .twinkle, .navlinks ul .twinkle2 {
+            animation: twinkling 1s linear infinite;
+        }
+
+        .navlinks li {
+            margin-right: 20px;
+        }
+
+        .navlinks a {
+            color: azure;
+            font-size: 30px;
+        }
+
+        .navlinks a:hover {
+            color: yellow;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        h2 {
+            font-size: 30px;
+            color: rgb(212, 43, 99);
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .photo-container {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: transparent;
+        }
+
+        .photo-container img {
+            width: 30%;
+            height: auto;
+            max-height: 50vh;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .photo-container p span {
+            margin: 0;
+            font-size: 40px;
+        }
+
+        .homeview {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: transparent;
+        }
+
+        .homeview span {
+            font-size: 70px;
+            margin-left: 130px;
+        }
+
+        #About img {
+            margin-left: 300px;
+        }
+
+        .header h1 .twinkle, .header h1 .twinkle2 {
+            margin: 0;
+            animation: twinkling 0.75s linear infinite;
+        }
+
+        .homeview .j, .homeview .e, .homeview .s, .homeview .ss {
+            animation: bounces 1s linear infinite;
+        }
+
+        @keyframes twinkling {
+            0% {
+                opacity: 0.3;
+            }
+
+            100% {
+                opacity: 0.9;
+            }
+        }
+
+        @keyframes bounces {
+            0% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(-1px);
+            }
+        }
+
+        /* Media Query for screens with a maximum width of 600px */
+        @media screen and (max-width: 600px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header img {
+                width: 80%;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .navlinks ul {
+                flex-direction: column;
+            }
+
+            .navlinks ul .twinkle, .navlinks ul .twinkle2 {
+                animation: twinkling 1s linear infinite;
+            }
+
+            #About img {
+                margin-left: 0;
+            }
+
+            .portfolio-content {
+                padding: 10px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+            section p img {
+                margin-left: 0;
+            }
+
+            .photo-container {
+                display: flex;
+                align-items: center;
+                padding: 20px;
+                background-color: transparent;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .photo-container img {
+                width: 80%;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .photo-container p span {
+                margin: 0;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="400829577_240084855759581_6364004151654546051_n.jpg" alt="Pretty Jess Image">
+        <h1><span class="twinkle">✨</span> Pretty Jess <span class="twinkle2">✨</span></h1>
+    </div>
+    <div class="navlinks">
+        <nav>
+            <ul>
+                <span class="twinkle">🌟</span><li><a href="#" onclick="displaySection('About')">About Me</a></li>
+                <span class="twinkle">🌟</span><li><a href="#" onclick="displaySection('Highlight')">Portfolio Highlights</a></li>
+                <span class="twinkle2">🌟</span><li><a href="#" onclick="displaySection('Services')">Services</a></li>
+                <span class="twinkle">🌟</span><li><a href="#" onclick="displaySection('Photos')">Photos</a></li>
+                <span class="twinkle2">🌟</span><li><a href="#" onclick="displaySection('Contact')">Hobbies</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="portfolio-content">
+        <section id="Home">
+               <div class="homeview">
+                <h2>
+                    <span id="prettier" onload="changeName()">Pretty</span>
+                    <span  style="color:rgb(234, 16, 53) ;" class="j">J</span>
+                    <span style="color:rgb(244, 244, 20) ;" class="e">e</span>
+                    <span style="color:rgb(210, 143, 19) ;" class="s">s</span>
+                    <span style="color:rgb(17, 222, 17) ;" class="ss">s</span>
+                   </h2>
+               </div>
+        </section>
+        <section id="About" class="hide">
+            <h2>About Me</h2>
+            <p>📸 Hello, I’m <span class="twinkle">✨</span> Pretty Jess!<span class="twinkle">✨</span> As a passionate photographer,
+                 I weave stories through my lens, capturing slices of life and raw emotions.
+                  My love for artistry and creativity knows no bounds, and I strive to share my unique perspective
+                with the world, one frame at a time. 🌟<br><br>📸 My lens becomes a storyteller, weaving narratives from sun-kissed
+                mornings to moonlit nights. Through the click of my shutter, I freeze laughter, tears, and stolen glances.
+                Each frame is a canvas of emotions, painted with light and shadows.<br><br><img src="384474549_1053918365599905_6114235989421614273_n-removebg-preview.png" alt="Pretty Jess Photography"><br><br>
+                🌟 I chase fleeting moments, like dewdrops on petals or a child’s first step. My camera is my compass,
+                guiding me through bustling streets, serene landscapes, and intimate gatherings. In this chromatic dance,
+                I find solace and purpose.<br><br>🎨 Artistry blooms in every frame. The play of colors, the symmetry of 
+                architecture, the wrinkles etched by time – they all whisper stories. And I, the silent witness, 
+                translate them into pixels and prints.<br><br>🌿 So here I am, Pretty Jess, a curator of memories. 
+                With every click, I invite you to see the world through my eyes, to feel the heartbeat of existence. 
+                Welcome to my visual symphony. 📷✨ </p>
+        </section>
+
+        <section id="Highlight" class="hide">
+            <h2>Portfolio Highlights</h2>
+            <p>              
+                📸  Explore my diverse portfolio , where  stunning landscapes  stretch their arms toward the horizon. Feel the  crisp mountain air  as you gaze upon snow-capped peaks, their majesty echoing through valleys.
+                <br><br>
+                🌿  Vibrant portraits  come alive, each face a universe of emotions. The wrinkles etched by laughter, the sparkle in eyes – they reveal stories untold.  Humanity's tapestry , woven with threads of joy, sorrow, and resilience.
+                <br>
+                <br>
+                🌅  Captivating moments frozen in time : A child chasing bubbles, petals carried by the wind, lovers stealing glances. These fragments of existence, suspended in pixels, whisper secrets of  life's fleeting beauty .
+                <br>
+                <br>
+                🎨  Each photograph tells a story , a chapter in the novel of existence. The dew-kissed rose, the weathered door, the sun painting the sky – they invite you to step closer, to feel the heartbeat of the moment.
+                <br>
+                <br>
+                🌠  Immerse yourself  in these visual narratives. Let the colors seep into your soul, the compositions dance in your mind. For in this gallery, time stands still, and  you become part of the tale .
+                <br>
+                <br>
+                📷✨ Welcome, fellow traveler, to my world of pixels and dreams. 🌟</p>
+        </section>
+
+        <section id="Services" class="hide">
+            <h2>Services</h2>
+            <p>I am a professional photographer who has a passion for capturing the beauty and diversity of the world. I have honed my skills and developed my own style through years of practice and learning. I have a portfolio of stunning images that showcase my talent and creativity. I offer my services to clients who need high-quality photos for various purposes, such as weddings, events, portraits, products, or publications. I am always looking for new challenges and opportunities to grow as a photographer and a business owner. I am a member of PPA, a non-profit organization that provides me with resources, tools, and community to help me succeed in my profession. I am proud of my work and enjoy sharing my stories and insights with others. I am a professional photographer who loves what I do. 📸
+                <br><br>
+               Our Email address : <a target="_blank" href="http://ghettopeople111@gmail.com">ghettopeople111@gmail.com</a>
+               <br><br>
+               YouTube Channel : <b>ghettopeople111</b></p>
+        </section>
+
+        <section id="Photos" class="hide">
+            <h2>Photos</h2>
+            <div class="photo-container">
+                <p>Interested in my photos? Feel free to view. <br><img src="400829577_240084855759581_6364004151654546051_n.jpg" alt="Pretty Jess Photography" ><br>
+                    <span>Thi is me captivating moments frozen in time.</span>
+                    <br>
+                    <img src="423062578_403249478903433_2038636621041800497_n.jpg" alt="Pretty Jess Photography" ><br>
+                    <span>Thi is Me as a passionate photographer</span>
+                    <br>
+                    <img src="423105705_295012983592518_7622367217731564567_n.jpg" alt="Pretty Jess Photography" ><br>
+                    <span>Thi is me capturing slices of life and raw emotions.</span>
+                    <br>
+                    <img src="384474549_1053918365599905_6114235989421614273_n.jpg" alt="Pretty Jess Photography" ><br>
+                    <span>Thi is me sharing my uniqueness perspective with the world, one frame at a time. </span> </p>
+                    
+            </div>
+        </section>
+
+        <section id="Contact" class="hide">
+            <h2>Hobbies</h2>
+            <p>Sleeping is a relaxing hobby that helps me recharge my energy and feel refreshed.<br><br>
+                I enjoy watching scary movies because they are engrossing and thrilling. I like to feel the suspense
+                and the adrenaline rush of a good horror film.<br><br>
+                Staying alone is a fulfilling hobby for me as an introvert. I appreciate the peace and quiet of solitude
+                and the opportunity to do what I want without distractions.<br><br> 
+                Photography is also my hobby that involves capturing moments in time, translating what you see and feel 
+                into images that can be shared and appreciated</p>
+        </section>
+    </div>
+
+    <script>
+        function displaySection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.portfolio-content section').forEach(section => {
+                section.classList.add('hide');
+            });
+
+            // Display the selected section
+            document.getElementById(sectionId).classList.remove('hide');
+        }
+
+        function changeName() {
+            const myWords = ["Pretty", "Queen", "Empress", "Toto", "Lovely", "Beautiful"];
+            const placeName = document.getElementById("prettier");
+            let currentIndex = 0;
+
+            setInterval(() => {
+                placeName.textContent = myWords[currentIndex];
+                currentIndex = (currentIndex + 1) % myWords.length;
+            }, 1000);
+        }
+        window.onload = changeName;
+        
+    </script>
+</body>
+</html>
